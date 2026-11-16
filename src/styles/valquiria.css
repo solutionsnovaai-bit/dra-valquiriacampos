@@ -47,11 +47,12 @@ h1 em, h2 em { color: #9b5e56; }
     max(5vw, calc((100vw - 1280px) / 2));
 }
 .mp-hero h1 {
-  max-width: 10.4ch;
   margin: 21px 0;
-  font-size: clamp(4rem, 6.7vw, 7.1rem);
+  font-size: clamp(4rem, 6.1vw, 6.7rem);
+  text-wrap: balance;
   line-height: .99;
 }
+.mp-hero h1 em { display: block; }
 .mp-hero-copy > p { max-width: 415px; color: #614f48; }
 .mp-hero-image {
   position: relative;
