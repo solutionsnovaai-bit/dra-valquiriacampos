@@ -13,7 +13,7 @@ const assets = {
   heroMobile: '/valquiria/retrato-capa-mobile.webp',
   monogram: '/valquiria/monograma.svg',
   horizontalLogo: '/valquiria/assinatura.svg',
-  portrait: '/valquiria/retrato-perfil.webp',
+  portrait: '/valquiria/retrato-perfil-editorial.webp',
 }
 
 const EASE = [0.22, 1, .36, 1] as const
@@ -117,27 +117,27 @@ const services: CatalogService[] = [
   {
     id: 'lavieen', title: 'Laser Lavieen', category: 'Tecnologia para a pele',
     description: 'Na avaliação, converse sobre o uso do laser e sobre os cuidados antes e depois da sessão.',
-    photo: { alt: 'Detalhe da ponteira de laser durante atendimento, publicado no perfil da profissional' },
+    photo: { alt: 'Ponteira de laser facial ao lado de uma mulher com óculos de proteção, em imagem ilustrativa' },
   },
   {
     id: 'hipro', title: 'Ultrassom microfocado HiPRO', category: 'Estética facial',
     description: 'Conheça a tecnologia e converse sobre as áreas que podem ser avaliadas.',
-    photo: { alt: 'Equipamento HiPRO na divulgação da profissional' },
+    photo: { alt: 'Aplicador de ultrassom estético junto à linha da mandíbula, em imagem ilustrativa' },
   },
   {
     id: 'preenchimento', title: 'Preenchimento labial', category: 'Cuidados labiais',
     description: 'A avaliação considera formato, proporção e o que você busca para os lábios.',
-    photo: { alt: 'Detalhe de lábios recortado de uma publicação sobre preenchimento labial' },
+    photo: { alt: 'Avaliação do contorno dos lábios, em imagem ilustrativa' },
   },
   {
     id: 'microagulhamento', title: 'Microagulhamento', category: 'Cuidados com a pele',
     description: 'Converse sobre a indicação para sua pele e os cuidados orientados para o procedimento.',
-    photo: { alt: 'Detalhe de uma publicação sobre microagulhamento no perfil profissional' },
+    photo: { alt: 'Caneta de microagulhamento próxima à pele, em imagem ilustrativa' },
   },
   {
     id: 'toxina', title: 'Toxina botulínica', category: 'Estética facial',
     description: 'Converse na avaliação sobre suas prioridades e as possibilidades de cuidado para linhas de expressão.',
-    photo: { alt: 'Luvas e mãos da profissional durante um atendimento, em recorte da publicação' },
+    photo: { alt: 'Avaliação de linhas de expressão na testa, em imagem ilustrativa' },
   },
   {
     id: 'criolipolise', title: 'Criolipólise', category: 'Estética corporal',
@@ -147,8 +147,8 @@ const services: CatalogService[] = [
 
 const resultCards: ResultCard[] = services.flatMap(({ id, title, description, photo }) =>
   photo ? [{
-    title, description, image: `/valquiria/${id}.webp`, alt: photo.alt,
-    source: 'Perfil profissional',
+    title, description, image: `/valquiria/${id}-editorial.webp`, alt: photo.alt,
+    source: 'Imagem ilustrativa',
   }] : [],
 )
 
@@ -205,7 +205,7 @@ function About() {
   return <section className="mp-about mp-section" id="sobre">
     <div className="mp-container mp-about-grid">
       <Reveal className="mp-about-image">
-        <img src={assets.portrait} width="370" height="480" loading="lazy" decoding="async" alt="Dra. Valquíria Campos em foto do perfil profissional" />
+        <img src={assets.portrait} width="800" height="1000" loading="lazy" decoding="async" alt="Retrato editorial recriado a partir de uma foto da Dra. Valquíria Campos" />
       </Reveal>
       <Reveal className="mp-about-copy">
         <span className="mp-kicker">Sobre a profissional</span>

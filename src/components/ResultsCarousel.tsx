@@ -7,7 +7,7 @@ export type ResultCard = {
   description: string
   image: string
   alt: string
-  source: 'Perfil profissional'
+  source: 'Imagem ilustrativa'
 }
 
 const interval = 4000
@@ -86,7 +86,7 @@ export function ResultsCarousel({ cards, evaluationUrl }: {
       <div className="mp-results-header">
         <div className="mp-section-heading">
           <h2 id="mp-results-title">Galeria <em>de procedimentos.</em></h2>
-          <p>Veja detalhes dos procedimentos divulgados no perfil profissional da Dra. Valquíria.</p>
+          <p>Conheça os procedimentos da Dra. Valquíria por meio de imagens ilustrativas.</p>
         </div>
         <div className="mp-results-controls"
           onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
@@ -115,7 +115,7 @@ export function ResultsCarousel({ cards, evaluationUrl }: {
           initial={false} animate={{ borderColor: current === index ? '#9b7054' : '#462d302b' }}
           transition={{ duration: reduced ? 0 : .3 }}>
           <figure className="mp-result-figure">
-            <img src={card.image} width={320} height={280} alt={card.alt}
+            <img src={card.image} width={960} height={720} alt={card.alt}
               loading="lazy" decoding="async" draggable={false} />
           </figure>
           <div className="mp-result-copy">

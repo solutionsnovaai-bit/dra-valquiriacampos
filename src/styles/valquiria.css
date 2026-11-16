@@ -92,7 +92,7 @@ h1 em, h2 em { color: #9b5e56; }
 .mp-service-card.mp-catalog-card h3 { font-size: clamp(1.5rem, 2.45vw, 2.35rem); margin: 9px 0 12px; }
 .mp-service-card.mp-catalog-card p { font-size: .92rem; line-height: 1.6; }
 .mp-result-card { border-radius: 10px; }
-.mp-result-figure { padding: 0; aspect-ratio: 1.2; }
+.mp-result-figure { padding: 0; aspect-ratio: 4 / 3; }
 .mp-result-figure img { object-fit: cover; }
 .mp-about-image { width: min(100%, 366px); aspect-ratio: 370 / 480; border-radius: 200px 200px 14px 14px; }
 .mp-about-image img { object-fit: cover; }
