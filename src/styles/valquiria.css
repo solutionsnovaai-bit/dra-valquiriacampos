@@ -1,0 +1,135 @@
+:root {
+  --mp-navy: #63453d;
+  --mp-navy-deep: #362823;
+  --mp-rose: #a36d65;
+  --mp-rose-light: #ecd8cc;
+  --mp-gold: #855d48;
+  --mp-paper: #faf5ef;
+  --mp-cream: #fffaf4;
+  --mp-muted: #695750;
+  --mp-line: #63453d26;
+}
+h1 em, h2 em { color: #9b5e56; }
+.mp-kicker, .mp-eyebrow { letter-spacing: .15em; }
+.mp-header {
+  background: #fbf6f0f5;
+  border-bottom-color: var(--mp-line);
+}
+.mp-header-inner { height: 77px; }
+.mp-brand { flex: 0 1 244px; }
+.mp-brand-flight-target { inset: 0 auto 0 0; width: 24.49%; height: 100%; }
+.mp-menu-button { background: var(--mp-cream); }
+.mp-desktop-nav a { font-size: 13px; }
+.mp-desktop-nav a:hover { color: var(--mp-rose); }
+.mp-header-cta { font-size: 12px; }
+.mp-intro-paper {
+  background: linear-gradient(133deg, #efdfd1, #faf5ef 56%, #e8d5c7);
+  border-color: #b88b7191;
+}
+.mp-intro-veil { background: #ba947d; }
+.mp-intro-logo { width: clamp(105px, 17vw, 167px); color: #624438; }
+.vc-intro-name { font: 500 clamp(1.7rem, 5vw, 3rem)/1.13 var(--mp-display); color: #624438; }
+.mp-intro-skip { border-color: #77564855; }
+.mp-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.09fr) minmax(0, 1fr);
+  align-items: stretch;
+  min-height: clamp(600px, 47vw, 760px);
+  background: #f2e5d9;
+  border-bottom: 1px solid var(--mp-line);
+}
+.mp-hero-copy {
+  align-self: center;
+  width: auto;
+  min-width: 0;
+  margin: 0;
+  padding: clamp(46px, 7.1vw, 115px) clamp(24px, 4.2vw, 72px) clamp(46px, 7.1vw, 115px)
+    max(5vw, calc((100vw - 1280px) / 2));
+}
+.mp-hero h1 {
+  max-width: 10.4ch;
+  margin: 21px 0;
+  font-size: clamp(4rem, 6.7vw, 7.1rem);
+  line-height: .99;
+}
+.mp-hero-copy > p { max-width: 415px; color: #614f48; }
+.mp-hero-image {
+  position: relative;
+  z-index: 0;
+  display: block;
+  inset: auto;
+  aspect-ratio: auto;
+  min-height: 0;
+  overflow: hidden;
+  mask-image: none;
+}
+.mp-hero-image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 37%;
+}
+.mp-value-card, .mp-service-card.mp-catalog-card { border-radius: 8px; }
+.mp-value-card { min-height: 216px; }
+.mp-services { background: #f1e5da; }
+.mp-services-grid.mp-catalog-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: none;
+}
+.mp-service-card.mp-catalog-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 213px;
+  padding: clamp(21px, 2.8vw, 37px);
+  gap: 0;
+  background: #fffbf6;
+}
+.mp-catalog-details { flex: 1; }
+.mp-catalog-topline { min-height: 0; }
+.mp-catalog-topline > span:first-child, .mp-service-card.mp-catalog-card a { color: var(--mp-navy); }
+.mp-service-card.mp-catalog-card h3 { font-size: clamp(1.5rem, 2.45vw, 2.35rem); margin: 9px 0 12px; }
+.mp-service-card.mp-catalog-card p { font-size: .92rem; line-height: 1.6; }
+.mp-result-card { border-radius: 10px; }
+.mp-result-figure { padding: 0; aspect-ratio: 1.2; }
+.mp-result-figure img { object-fit: cover; }
+.mp-about-image { width: min(100%, 366px); aspect-ratio: 370 / 480; border-radius: 200px 200px 14px 14px; }
+.mp-about-image img { object-fit: cover; }
+.mp-about-copy .mp-button { margin-top: 10px; }
+.mp-process { background: #f5ebe2; }
+.mp-final-cta { background: #4c3832; }
+.mp-final-cta h2 em { color: #e9b9aa; }
+.mp-final-cta p { color: #f0ded4; }
+.mp-footer-brand img { width: 58px; height: 58px; object-fit: contain; }
+.mp-footer-brand small { color: #855d48; }
+.mp-fab { background: var(--mp-navy); }
+@media (max-width: 900px) {
+  .mp-header-inner { height: 69px; }
+  .mp-brand { flex-basis: 222px; }
+  .mp-hero {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    overflow: hidden;
+  }
+  .mp-hero-copy {
+    width: min(100%, 680px);
+    max-width: none;
+    padding: clamp(35px, 6vw, 55px) clamp(22px, 5.4vw, 45px);
+  }
+  .mp-hero h1 { max-width: 12ch; font-size: clamp(3.45rem, 8.6vw, 5.5rem); }
+  .mp-hero-image { align-self: center; width: min(100%, 680px); aspect-ratio: 1.25; }
+  .mp-hero-image img { object-position: 50% 29%; }
+  .mp-services-grid.mp-catalog-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .mp-about-image { max-width: min(100%, 350px); }
+}
+@media (max-width: 580px) {
+  .mp-hero h1 { font-size: clamp(3rem, 11.3vw, 4.4rem); }
+  .mp-hero-actions { align-items: flex-start; }
+  .mp-hero-actions .mp-button { width: auto; }
+  .mp-hero-image { aspect-ratio: 1.14; }
+  .mp-services-grid.mp-catalog-grid { grid-template-columns: 1fr; }
+  .mp-service-card.mp-catalog-card { min-height: 160px; }
+  .mp-about-image { width: min(100%, 305px); aspect-ratio: 370 / 480; }
+  .mp-final-cta h2 { font-size: clamp(2.6rem, 12vw, 3.55rem); }
+}
